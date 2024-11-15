@@ -1,0 +1,527 @@
+/*Importé fuentes para usarlas en mi página*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&family=Fjalla+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*----------------------------------------------------------ENCABEZADO------------------------------------------------*/
+/*doy estilo al header que ocuparé en todos mis html*/
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*doy estilo a los botones (tipo de letra, tamaño, y le agrego una transición)*/
+.botones a{
+    display: inline-block;
+    position: relative;
+    margin-right: 50px; 
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+/*agrego estilo a mis botones (el color que tendrán las letras cuando pase el mouse)*/
+.botones a:hover {
+    background-color: none; 
+    color: orange;            
+}
+/*agrego estilo a mis botones (creo la línea debajo del enlace cuando el mouse está sobre el)*/
+.botones a::after {
+    content: "";  
+    position: absolute;
+    left: 0;
+    bottom: -2px;  
+    width: 0;
+    height: 3px;  
+    background-color: orange;
+    transition: width 0.3s;
+}
+/*Le doy estilo a la línea debajo de los botones*/
+.botones a:hover::after {
+    width: 100%;  
+}
+/*--------------------------------------------------------INICIO-------------------------------------------------------------*/
+/*Doy estilo a la parte central del index*/
+.main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    width: 100%; 
+}
+/*Preparo el contenedor de la presentaión*/
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 620px;
+    background: #e8e5e3;
+    position: relative;
+}
+/*Doy estilo a los dos divs que se encuentran con el texto a la derecha de mi página*/
+.derecha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    background: white;
+    margin-top: 50px;
+}
+/*Declaro el estilo de mi contenedor horario (acomodo lo que habrá dentro de el)*/
+.horario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+/*Reduzco lineas de codigo con elementos que tienen en comun los p*/
+.main p{
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: justify;
+}
+/*Reduzco lineas de codigo con elementos que tienen en comun los p*/
+.main h1{
+    font-size: 50px;
+    font-family: "Fjalla One", sans-serif;
+    color: orange;
+}
+/*Alineo y acomodo el contenedor las imagenes del horario de cierre y apertura*/
+.imagenes {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-end; 
+    width: 50%;
+    margin-top: 6%;
+}
+/*Doy estilo a las dos imagenes del contenedor (altura y ancho)*/
+.imagenes img {
+    width: 450px; 
+    height: auto;
+    margin-right: -130px;  
+}
+.imagenes img:last-child {
+    margin-right: 20px;
+}
+/* Doy stilo para el título principal del contenedor presentación*/
+#tituloPrin span {
+    display: block;  
+    font-size: 70px;
+    text-align: left;
+    color: orange;
+    line-height: 1.5;
+}
+/*Da estilo para al parrafo del contenedor presentación*/
+#parrafo {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    margin-top: 5%;
+    line-height: 1.5; 
+    text-align: justify;
+}
+/*Acomodo la imagen más grande del incio*/
+#ilustracion {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+/* Da estilo a las img que se encuentran a la derecha de los contenedores con texto*/
+#imagenDe {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+/*Doy estilo al contenedor de la ubicación*/
+#cuadroUno {
+    flex: 1;
+    padding: 20px;
+    margin-right: 50px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 90px;
+}
+/*Acomoda el acomodo del contenedor para el horario*/
+#CuadroDos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 4%; 
+}
+/*Da estilo a la info de la presentación*/
+#info {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+/*Acomoda la pos. del encabezado*/
+#encabezado{
+    position: relative;
+    margin-right: 50px;
+    flex: 1;                 
+    margin-left: 150px;
+} /*Acomodo el tamaño de la img. más grande*/
+#ilustracion img {
+    width: 125%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    margin-right: 25%;
+} 
+#imagenDe img {
+    width: 80%; 
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+/*----------------------------------------------------FOOTER------------------------------------------------------*/
+/*Da estilo al contendor general del pie de página (color, justificado, etc)*/
+.footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 15px; 
+    background-color: rgb(33, 31, 31);
+    margin-top: 50px;
+}
+/*Acomoda la forma en la que se verá en contenido del footer*/
+#CuadroTres {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro de CuadroTres */
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    gap: 5px; /* Espacio entre los elementos del footer */
+    color: white;
+    font-size: 15px;
+}
+/*-------------------------------------------------------------MENÚ-------------------------------------------------------------*/
+/*--------------------------------------------botones-------------------------------------------------*/
+/*Da el estilo general al cuerpo del menú (alineaxión, padding, etc)*/
+.mainMenu {
+    padding-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}/* Estilo para los botones del menú */
+.botonesMenu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}/*Agrego una transición y mejoro el diseño de los botones*/
+.botonesMenu a {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    background-color: #e8e5e3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.botonesMenu a:hover {
+    background-color: orange;
+    color: white;
+}/* Oculta todas las secciones de menú por defecto*/
+.cuadroCuatro {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -8px;
+    font-family: "Poppins", sans-serif;
+    max-width: 1200px;
+    padding: 20px;
+}/*Muestra la sección correspondiente cuando el enlace que seleccionemos */
+.cuadroCuatro:target {
+    display: flex;
+}/* Si ninguna sección está seleccionada, muestra "Platos principales"*/
+.mainMenu:not(:has(.cuadroCuatro:target)) #platos {
+    display: flex;
+}
+/* Establezco la altura de los botones que me permitiran navegar dentro de las secciones del menú*/
+#CuadroBotones{
+    height: 70px;
+}
+/*----------------------------------ESTILO DE LOS CONTENEDORES DE TODO EL MENÚ-----------------------------------------*/
+/*Da el estilo general de los contenedores que contendrán a todos los alimentos del menú*/
+.recuadros {
+    max-width: 300px;
+    padding: 15px;
+    background-color: white;
+    border: solid orange;
+    border-radius: 10px;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.3s;
+} 
+.recuadros:hover {
+    transform: scale(1.05);
+} /*Da estilo al tamaño y la forma de las img*/
+.recuadros img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+} /*Da estilo al tamaño y la forma de los nombres de los alimentos*/
+.recuadros h2 {
+    font-size: 24px;
+    margin: 10px;
+} /*Da estilo a la descripcion de los alimentos*/
+.recuadros p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+} /*Le da forma al encabezado "TAMAÑO"*/
+.recuadros span {
+    font-size: 16px;
+    margin-bottom: 10px;
+} /*Las siguientes lineas dan forma a lo que hay dentro de la lista no ordenada*/
+.recuadros ul {
+    padding-left: 20px;
+}
+.recuadros ul li {
+    font-size: 15px;
+    color: #666;
+}
+.recuadros ul li b{
+    font-size: 15px;
+    color: rgb(64, 58, 58);
+}
+/*--------------------------titulos----------------------------------*/
+/* Doy diseño al contenedor de título de cada seccion*/
+#titulo {
+    height: 60px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: -4px;
+    font-size: 40px;
+    color: orange; 
+} /*Le doy estilo a las letras dentro del contendor titulo*/
+#titu{
+    margin-top: -4px;
+    font-size: 45px;
+    color: orange;
+}
+/*--------------------------------------------------------GALERIA-------------------------------------------------------*/
+/*Da estilo para el título principal de la galería, centrado y con fuente personalizada */
+.mainGaleria h1{
+    height: 60px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: -4px;
+    font-size: 50px;
+    color: rgb(26, 24, 24);
+    font-family: "Fjalla One", sans-serif;
+} /* Da estilo al contenedor individual de cada imagen de local*/
+.conLocal {
+    display: inline-block;
+    position: relative;
+    width: 30%; 
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 50%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} /*Ajusta las imágenes de .conLocal, ajustándolas para cubrir todo el contenedor */
+.conLocal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}/* Efecto al pasar el mouse sobre la imagen */
+.conLocal:hover img {
+    transform: scale(1.2); 
+} /* Da efecto de sombra y agrandamiento*/
+.conLocal:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); 
+} /*  Da estilo al título de la sección de platillos*/
+.platillos h1{
+    margin-top: 40px;
+    color: rgb(40, 37, 37);
+    color: orange;
+} /*Es el que hace al contenedor circular para cada imagen de platillo*/
+.conPlatillos {
+    width: 210px; 
+    height: 210px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #666;
+} /*Ajusto las imagenes para cubrir el contenedor circular*/
+.conPlatillos img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}/*Es el contenedor general de platillos (puse bordes redondeado y sombra)*/
+.platillos{
+    background: orange;
+    background: #e8e5e3;
+    margin-top: 80px;
+    border-radius: 90px;
+} /*Da el efecto para que mi contenedor Platillos suba y tenga sombra*/
+.platillos:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+}
+/*Doy estilo a toda la sección en donde van los eventos que se realizan*/
+.eventos h1{
+    margin-top: 30px;
+    color: black;
+} /* Es elontenedor individual de cada imagen de evento*/
+.conEventos {
+    display: inline-block;
+    width: 30%; 
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+} /* Da estilo general para la sección de eventos, centrado y con margen superior */
+.eventos{
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+} /*Da estilo a las img dentro del contenedor*/
+.conEventos img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+} /*Da estilo al contenedor de información adicional de eventos*/
+.eventoInfo {
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+} /*Da estilo para el título dentro de eventoInfo,*/
+.eventoInfo h2 {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+} /*Da estilo a la información del parrafo,*/
+.eventoInfo p {
+    font-size: 17px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    margin: 5px 0 0;
+    text-align: center;
+}
+/*organiza las imágenes del local de forma centrada*/
+#imgLocal {
+    text-align: center;
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+}
+/* Es el contenedor para las imágenes de los platillos*/
+#imgPlatillos {
+    display: flex; 
+    justify-content: center; 
+    gap: 80px; 
+    flex-wrap: wrap; 
+    padding: 20px; 
+} 
+/*Doy estilo general al contenedor para las imágenes de los eventos*/
+#imgEventos {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+/*------------------------------------------------------PROMOCIONES--------------------------------------------*/
+/* Estilo para los encabezados */
+.mainPromo h1 {
+    font-size: 60px;
+    font-family: "Fjalla One", sans-serif;
+    color: orange;
+}/* Estilo para la sección principal */
+.mainPromo {
+    justify-content: center;
+}/* Da estilo y centra las imágenes dentro de sus contenedores */
+.conDes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+}/*Da estilo para que todo esté centrado*/
+#descuentos {
+    text-align: center;
+    padding: 0 10px; 
+    width: 100%;
+}/* Da estilo al contenedor de imágenes de descuentos */
+#imgDescuentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+    width: 100%;
+}/*Establece el tamaño de las img*/
+#imgDescuentos img {
+    width: 620px;
+    height: auto;
+    border-radius: 40%;
+}/*ajusta el tamaño de los contenedores de los descuentos */
+#imgDescuentos .conDes {
+    flex: 1 0 40%;
+    max-width: 450px; 
+}/* Para las imágenes en las filas de abajo de descuentos */
+#imgDescuentos #arriba, #imgDescuentos #abajo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+/* Centrando el título de cupones */
+#cupones h1 {
+    text-align: center;
+}
+/* Da estilo al contenedor de cupones */
+#cupones {
+    text-align: center;
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}/* Da estilo al contenedor de imágenes de cupones */
+#imgCupones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}/*Acomoda el tamaño las imágenes de cupones */
+#imgCupones img {
+    width: 480px; 
+    height: auto;
+    transition: transform 0.3s ease; 
+}/* Efecto de zoom en las imágenes al pasar el mouse */
+#imgCupones img:hover {
+    transform: scale(1.05); 
+}
+#descuentos h1{
+    margin-bottom: 60px;
+}
+
